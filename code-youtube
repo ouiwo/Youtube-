@@ -1,0 +1,33 @@
+{% style %}
+
+.centremoica {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+{% endstyle %}
+
+<div class="centremoica">
+	<iframe width="850" height="480" src="https://www.youtube.com/embed/{{ section.settings.linkvid }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+{% schema %}
+{
+  "name": "youtube",
+  "settings": [
+    {
+		"type": "text",
+		"id": "linkvid",
+		"label": "Nom video",
+		"default": "cgcB1hviEOU"
+	}
+  ],
+  "presets": [
+    {
+      "name": "youtube",
+      "category": "youtube"
+    }
+  ]
+}
+{% endschema %}
